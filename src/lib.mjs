@@ -10,6 +10,18 @@ export const esc = (s) =>
 /** Relative prefix back to the site root, so pages work at any depth. */
 export const up = (depth) => (depth === 0 ? '' : '../'.repeat(depth));
 
+/**
+ * Inline emphasis for prose written in the content files. HTML is escaped
+ * first, so only these two markers can produce tags:
+ *   ***text***  bold italic
+ *   **text**    bold
+ */
+export function inline(s) {
+  return esc(s)
+    .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+}
+
 /** Author list in bibliographic form; the site owner is emphasised. */
 export function authorList(list) {
   return list

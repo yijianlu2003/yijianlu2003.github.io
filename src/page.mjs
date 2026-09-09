@@ -1,6 +1,6 @@
 // Renders one page. Each content module maps to a `kind`, handled below.
 
-import { esc, up, authorList, contactRows, jsonLd } from './lib.mjs';
+import { esc, up, inline, authorList, contactRows, jsonLd } from './lib.mjs';
 
 /* ------------------------------- sections ------------------------------- */
 
@@ -10,8 +10,16 @@ function sectionAbout(t, ctx) {
 
   return `<div class="prose prose--dropcap">
   <p class="lead">${esc(t.lead)}</p>
-  ${t.body.map((p) => `<p>${esc(p)}</p>`).join('\n  ')}
+  ${t.body.map((p) => `<p>${inline(p)}</p>`).join('\n  ')}
 </div>
+
+${
+  t.credo && t.credo.length
+    ? `<div class="credo">
+  ${t.credo.map((p) => `<p>${inline(p)}</p>`).join('\n  ')}
+</div>`
+    : ''
+}
 
 ${
   t.highlights && t.highlights.length

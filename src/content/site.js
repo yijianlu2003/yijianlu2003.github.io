@@ -4,7 +4,7 @@
 
 export const site = {
   url: 'https://yijianlu2003.github.io',
-  email: 'yijianlu@connect.hku.hk',
+  email: 'yijianlu2003@gmail.com',
   github: 'https://github.com/yijianlu2003',
   githubHandle: 'yijianlu2003',
 
