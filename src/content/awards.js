@@ -12,6 +12,10 @@ export const awards = {
     metaDescription: 'Scholarships, competition awards and athletic honours of Yijian Lu.',
     intro: null,
 
+    // Full-width album shown below the award columns.
+    albumLabel: 'Sport',
+    photoDir: 'sports',
+
     groups: [
       {
         label: 'Scholarships',
@@ -52,6 +56,10 @@ export const awards = {
     metaTitle: '荣誉与奖励 — 卢一健',
     metaDescription: '卢一健获得的奖学金、竞赛奖项与体育荣誉。',
     intro: null,
+
+    // 位于奖项分栏下方的整幅相册。
+    albumLabel: '运动',
+    photoDir: 'sports',
 
     groups: [
       {

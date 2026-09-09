@@ -4,7 +4,10 @@ import { esc, up, authorList, contactRows, jsonLd } from './lib.mjs';
 
 /* ------------------------------- sections ------------------------------- */
 
-function sectionAbout(t) {
+function sectionAbout(t, ctx) {
+  const v = ctx.site.visitors || {};
+  const showFlags = Boolean(v.flagSrc && v.flagHref);
+
   return `<div class="prose prose--dropcap">
   <p class="lead">${esc(t.lead)}</p>
   ${t.body.map((p) => `<p>${esc(p)}</p>`).join('\n  ')}
@@ -17,6 +20,18 @@ ${
     .map((h) => `<dt>${esc(h.label)}</dt><dd>${esc(h.value)}</dd>`)
     .join('\n  ')}
 </dl>`
+    : ''
+}
+
+${
+  showFlags
+    ? `<div class="rule-soft"></div>
+<h2 class="sub">${esc(t.visitorsLabel)}</h2>
+<div class="visitors">
+  <a href="${esc(v.flagHref)}" rel="noopener nofollow" aria-label="${esc(t.visitorsLabel)}">
+    <img src="${esc(v.flagSrc)}" alt="${esc(t.visitorsLabel)}" loading="lazy" decoding="async">
+  </a>
+</div>`
     : ''
 }`;
 }
@@ -134,12 +149,16 @@ ${
 }`;
 }
 
-function album(item, ctx) {
+function album(item, ctx, opts = {}) {
   const shots = (ctx.albums && ctx.albums[item.photoDir]) || [];
   if (!shots.length) return '';
   const { root, locale, ui } = ctx;
   return `<figure class="album">
-  <figcaption class="album-heading">${esc(ui.galleryHeading)}</figcaption>
+  ${
+    opts.noHeading
+      ? ''
+      : `<figcaption class="album-heading">${esc(ui.galleryHeading)}</figcaption>`
+  }
   <ul class="album-grid">
     ${shots
       .map((s) => {
@@ -188,7 +207,7 @@ function sectionExperience(t, ctx) {
     .join('\n\n');
 }
 
-function sectionAwards(t) {
+function sectionAwards(t, ctx) {
   return `<div class="awards">
   ${t.groups
     .map(
@@ -198,7 +217,15 @@ function sectionAwards(t) {
   </div>`
     )
     .join('\n  ')}
-</div>`;
+</div>
+
+${
+  t.photoDir
+    ? `<div class="rule-soft"></div>
+<h3 class="sub">${esc(t.albumLabel)}</h3>
+<div class="album-wide">${album(t, ctx, { noHeading: true })}</div>`
+    : ''
+}`;
 }
 
 function sectionContact(t, ctx) {

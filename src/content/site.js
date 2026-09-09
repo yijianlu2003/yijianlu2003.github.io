@@ -19,6 +19,27 @@ export const site = {
   portraitSquare: 'assets/portrait-square.jpg',
 
   updated: '2026-09',
+
+  // -------------------------------------------------------------------------
+  // VISITOR FLAGS (bottom of the home page)
+  //
+  // Uses flagcounter.com, which needs no account. To switch it on:
+  //   1. Go to https://flagcounter.com/ and click "Get your flag counter".
+  //   2. In the options, turn OFF every count — "Number of visitors",
+  //      "Pageviews" and "Show counts per flag" — and turn ON country
+  //      labels. Pick 8 columns and a transparent or #F1EAD9 background so
+  //      it sits well against the cream page.
+  //   3. It gives you an HTML snippet containing an <img src="..."> and a
+  //      surrounding <a href="...">. Paste those two URLs below.
+  //   4. Save the private management link it shows you — that is where your
+  //      own per-country totals stay visible, without appearing on the site.
+  //
+  // While either value is null the whole section is omitted from the page.
+  // -------------------------------------------------------------------------
+  visitors: {
+    flagSrc: null,
+    flagHref: null,
+  },
 };
 
 export const identity = {

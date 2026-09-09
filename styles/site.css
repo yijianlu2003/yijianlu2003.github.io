@@ -434,9 +434,13 @@ a.cite-title:hover { color: var(--oxblood); border-bottom-color: var(--oxblood);
 .entry { padding-bottom: 2.2rem; border-bottom: 1px solid var(--rule-2); }
 .entry:last-child { border-bottom: 0; padding-bottom: 0; }
 
+/* Grid rather than flex: a long title wraps inside its own column instead of
+   pushing the date onto a new line, so every date stays flush right. */
 .entry-head {
-  display: flex; flex-wrap: wrap; align-items: baseline;
-  justify-content: space-between; gap: 0.35rem 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: 1.25rem;
 }
 .entry-head h3,
 .entry-head h4 {
@@ -454,7 +458,34 @@ a.cite-title:hover { color: var(--oxblood); border-bottom-color: var(--oxblood);
   color: var(--ink-3);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+  text-align: right;
 }
+
+/* Narrow screens: stack the date above the title rather than squeezing both. */
+@media (max-width: 32rem) {
+  .entry-head { grid-template-columns: 1fr; }
+  .entry-period { grid-row: 1; text-align: left; margin-bottom: 0.15rem; }
+}
+
+.album-wide { max-width: 42rem; margin-inline: auto; }
+
+/* ---------- Visitor flags ---------- */
+
+.visitors {
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.visitors a {
+  display: inline-block;
+  padding: 0.6rem;
+  border: 1px solid var(--rule-2);
+  background: var(--cream-2);
+  line-height: 0;
+  transition: border-color 0.2s ease;
+}
+.visitors a:hover { border-color: var(--rule); }
+.visitors img { max-width: 100%; height: auto; }
 
 .entry-sub { margin: 0.15rem 0 0.7rem; color: var(--ink-2); font-size: 0.96em; }
 

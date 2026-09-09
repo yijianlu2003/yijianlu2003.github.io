@@ -33,6 +33,7 @@ export const experience = {
             photoDir: 'manulife',
             bullets: [
               'Studied Hong Kong insurance and financial planning while completing my first term at HKU: policy structures, premium and protection design, and the regulatory and ethics requirements for licensed intermediaries.',
+              'Passed the Hong Kong insurance intermediary qualifying examinations and was licensed as an insurance agent in November 2025.',
               'Prepared client-facing needs analyses across life, medical and savings products, and sat in on advisory meetings from first contact through to proposal.',
               'Learned the practical side of the trade — that a good recommendation is mostly arithmetic and honest questions, and that the hardest constraint is the client’s trust, not the product range.',
             ],
@@ -127,6 +128,7 @@ export const experience = {
             photoDir: 'manulife',
             bullets: [
               '在港大就读第一学期的同时系统学习香港保险与财务规划：保单结构、保费与保障额设计，以及持牌中介人的监管与职业道德要求。',
+              '通过香港保险中介人资格考试，于 2025 年 11 月正式取得保险代理人牌照。',
               '为客户准备涵盖寿险、医疗与储蓄型产品的需求分析，并全程旁听从初次接触到方案呈现的顾问会谈。',
               '学到了这门行当的实务一面——一份好建议大半靠算术和诚实的提问；真正最紧的约束是客户的信任，而不是产品线的宽度。',
             ],

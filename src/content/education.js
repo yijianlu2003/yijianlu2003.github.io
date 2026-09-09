@@ -33,8 +33,6 @@ export const education = {
         degree: 'Summer School in Applied Technology and Data Science',
         period: 'Jul — Sep 2023',
         place: 'Aberdeen, Scotland',
-        detail:
-          'Named Outstanding Student. Discussed frontier applications of AI and big data in industry with Professor Graeme Nicol.',
         photoDir: 'aberdeen',
       },
       {
@@ -90,8 +88,6 @@ export const education = {
         degree: '应用技术与数据科学暑期学校',
         period: '2023 年 7 月 — 9 月',
         place: '英国 · 阿伯丁',
-        detail:
-          '获评优秀营员。与 Graeme Nicol 教授探讨人工智能与大数据在工业技术中的前沿应用。',
         photoDir: 'aberdeen',
       },
       {

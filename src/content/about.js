@@ -27,6 +27,8 @@ export const about = {
       { label: 'Based in', value: 'Hong Kong SAR' },
       { label: 'Contact', value: 'yijianlu@connect.hku.hk' },
     ],
+
+    visitorsLabel: 'Visitors',
   },
 
   zh: {
@@ -49,5 +51,7 @@ export const about = {
       { label: '所在地', value: '中国香港' },
       { label: '联系邮箱', value: 'yijianlu@connect.hku.hk' },
     ],
+
+    visitorsLabel: '访客',
   },
 };
