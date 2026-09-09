@@ -172,7 +172,13 @@ function sectionExperience(t, ctx) {
     <p class="entry-sub">${
       e.unit ? `${esc(e.unit)} <span class="mid">·</span> ` : ''
     }<em>${esc(e.role)}</em> <span class="mid">·</span> ${esc(e.place)}</p>
-    <ul class="entry-bullets">${e.bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
+    ${
+      e.bullets && e.bullets.length
+        ? `<ul class="entry-bullets">${e.bullets
+            .map((b) => `<li>${esc(b)}</li>`)
+            .join('')}</ul>`
+        : ''
+    }
     ${e.photoDir ? album(e, ctx) : ''}
   </li>`
     )
@@ -317,7 +323,8 @@ ${jsonLd({ site, identity, pubs, url: `${site.url}${selfUrl}` })}
   <button class="lb-close" type="button" aria-label="Close">&times;</button>
   <button class="lb-prev" type="button" aria-label="Previous">&#8249;</button>
   <figure class="lb-figure">
-    <img id="lb-img" src="" alt="">
+    <!-- No src attribute: an empty one makes the browser refetch the page. -->
+    <img id="lb-img" alt="">
     <figcaption id="lb-cap"></figcaption>
   </figure>
   <button class="lb-next" type="button" aria-label="Next">&#8250;</button>

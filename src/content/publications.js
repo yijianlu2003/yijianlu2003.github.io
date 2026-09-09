@@ -32,10 +32,6 @@ const items = [
       en: 'A conditional, tolerance-adjusted node-pricing bound for deterministic unit commitment. At the unstabilized restricted-master dual, the method applies a Phase-II cascade of a period-separable operational-envelope bound, a chronology-preserving ramp-relaxed dynamic-programming bound, and an exact mixed-integer pricing fallback, so that stabilized pricing can still certify branch-and-price node termination.',
       zh: '针对确定性机组组合问题，提出一种带容差修正的条件性节点定价界。方法在未稳定化的受限主问题对偶点上应用二阶段级联：分时段可分的运行包络界、保持时序的爬坡松弛动态规划界，以及精确混合整数定价兜底，从而使稳定化定价仍能为分支定价的节点终止提供证书。',
     },
-    result: {
-      en: 'Across 15 jointly accepted root endpoints, exact true-dual unit pricing solves were reduced in every pair, with a maximum absolute bound difference of 2.24 × 10⁻⁸ against exact pricing.',
-      zh: '在 15 组共同通过验收的根节点端点上，精确真对偶单机定价求解次数在每一组均有下降，与精确定价相比界的最大绝对偏差为 2.24 × 10⁻⁸。',
-    },
   },
 ];
 

@@ -113,7 +113,7 @@ const SITE_JS = `/* Photo album lightbox. */
 
   function close() {
     box.hidden = true;
-    img.src = '';
+    img.removeAttribute('src');
     document.documentElement.style.overflow = '';
     if (lastFocus) lastFocus.focus();
   }

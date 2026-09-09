@@ -526,7 +526,7 @@ a.cite-title:hover { color: var(--oxblood); border-bottom-color: var(--oxblood);
 
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
   gap: 0.9rem;
   margin: 0;
   padding: 0;
@@ -547,10 +547,11 @@ a.cite-title:hover { color: var(--oxblood); border-bottom-color: var(--oxblood);
 .shot:hover { border-color: var(--oxblood); transform: translateY(-2px); }
 
 /* Albums mix landscape photographs with portrait phone screenshots, so show
-   each thumbnail whole rather than cropping to a fixed frame. */
+   each thumbnail whole rather than cropping to a fixed frame. The slightly
+   tall box gives portrait shots more area without shrinking landscape ones. */
 .shot img {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 5;
   object-fit: contain;
   background: var(--cream);
 }

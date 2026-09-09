@@ -38,7 +38,7 @@ export const awards = {
       {
         label: 'Athletics',
         items: [
-          '3rd place, Men’s 4×100 m medley relay, 20th Jiangsu Provincial Games — 2022',
+          '6th place, Men’s 4×100 m medley relay, 20th Jiangsu Provincial Games — 2022',
           'First Prize, Men’s 100 m breaststroke, 51st NJAU Sports Competition — 2023',
           'Level-5 Social Sports Instructor, National Vocational Qualification',
         ],
@@ -79,7 +79,7 @@ export const awards = {
       {
         label: '体育',
         items: [
-          '江苏省第二十届运动会 男子 4×100 米混合泳接力 第三名 — 2022',
+          '江苏省第二十届运动会 男子 4×100 米混合泳接力 第六名 — 2022',
           '南京农业大学第五十一届运动会 男子 100 米蛙泳 第一名 — 2023',
           '社会体育指导员（国家职业资格）五级',
         ],
