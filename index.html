@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>选择设计方案 — 卢一健</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    background: #101010; color: #f2f0ec;
+    font: 400 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+    padding: 3rem 1.5rem;
+  }
+  .box { width: 100%; max-width: 40rem; }
+  h1 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 0.4rem; }
+  p.sub { margin: 0 0 2rem; color: #8f8a83; font-size: 0.9rem; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: #262626; border: 1px solid #262626; }
+  li { display: flex; align-items: stretch; background: #101010; }
+  li a:first-child {
+    flex: 1 1 auto; display: flex; align-items: baseline; gap: 1rem;
+    padding: 1.15rem 1.25rem; text-decoration: none; color: inherit; transition: background .16s;
+  }
+  li a:first-child:hover { background: #191919; }
+  .k { font: 600 0.72rem/1 ui-monospace, Menlo, monospace; letter-spacing: .12em; color: #e8703f; width: 1.2rem; }
+  .n { font-weight: 500; }
+  .e { color: #8f8a83; font-size: 0.85rem; }
+  a.zh {
+    flex: none; display: grid; place-items: center; padding: 0 1.1rem;
+    border-left: 1px solid #262626; text-decoration: none; color: #8f8a83; font-size: 0.78rem;
+    transition: color .16s, background .16s;
+  }
+  a.zh:hover { color: #f2f0ec; background: #191919; }
+  footer { margin-top: 1.5rem; color: #6b6660; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+  <div class="box">
+    <h1>三个设计方案</h1>
+    <p class="sub">内容完全相同，只有排版与气质不同。点开看完整页面，然后告诉我选哪一个。每个方案内都可以直接切换中英文。</p>
+    <ul>
+      <li>
+        <a href="a/">
+          <span class="k">A</span>
+          <span class="n">期刊印刷风</span>
+          <span class="e">Editorial</span>
+        </a>
+        <a class="zh" href="a/zh/">中文版 →</a>
+      </li>
+      <li>
+        <a href="b/">
+          <span class="k">B</span>
+          <span class="n">瑞士技术风</span>
+          <span class="e">Swiss technical</span>
+        </a>
+        <a class="zh" href="b/zh/">中文版 →</a>
+      </li>
+      <li>
+        <a href="c/">
+          <span class="k">C</span>
+          <span class="n">古典学院风</span>
+          <span class="e">Classic academic</span>
+        </a>
+        <a class="zh" href="c/zh/">中文版 →</a>
+      </li>
+    </ul>
+    <footer>确定之后我会把选中的方案放到网站根目录，删掉另外两个，再推到 GitHub Pages。</footer>
+  </div>
+</body>
+</html>

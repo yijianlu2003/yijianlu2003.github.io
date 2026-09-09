@@ -1,0 +1,14 @@
+{
+  "name": "yijianlu2003.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Academic homepage of Yijian Lu",
+  "type": "module",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "final:a": "node src/build.mjs --final=a",
+    "final:b": "node src/build.mjs --final=b",
+    "final:c": "node src/build.mjs --final=c",
+    "serve": "python3 -m http.server 4321"
+  }
+}
