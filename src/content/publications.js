@@ -23,7 +23,7 @@ const items = [
       'A Tolerance-Aware Pricing Certificate for Stabilized Dantzig–Wolfe Branch-and-Price in Unit Commitment',
     venue: 'Algorithms',
     venueDetail: '19(9), 731',
-    indexed: { en: 'SCIE / EI · IF 2.6', zh: 'SCIE / EI 收录 · IF 2.6' },
+    indexed: { en: 'EI · IF 2.6', zh: 'EI 收录 · IF 2.6' },
     doi: '10.3390/a19090731',
     url: 'https://doi.org/10.3390/a19090731',
     role: { en: 'Corresponding author', zh: '通讯作者' },
