@@ -1,30 +1,56 @@
+/* Photo album lightbox. */
 (function () {
-  var links = Array.prototype.slice.call(document.querySelectorAll('[data-spy]'));
-  var sections = links
-    .map(function (l) { return document.querySelector(l.getAttribute('href')); })
-    .filter(Boolean);
-  if (sections.length) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        links.forEach(function (l) {
-          l.classList.toggle('is-current', l.getAttribute('href') === '#' + e.target.id);
-        });
-      });
-    }, { rootMargin: '-20% 0px -70% 0px' });
-    sections.forEach(function (s) { io.observe(s); });
+  var box = document.getElementById('lightbox');
+  if (!box) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  var shots = [], index = -1, lastFocus = null;
+
+  function collect() {
+    shots = Array.prototype.slice.call(document.querySelectorAll('.shot'));
   }
 
-  var reveals = document.querySelectorAll('[data-reveal]');
-  if (!reveals.length) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    reveals.forEach(function (el) { el.classList.add('is-in'); });
-    return;
+  function show(i) {
+    if (i < 0) i = shots.length - 1;
+    if (i >= shots.length) i = 0;
+    index = i;
+    var s = shots[index];
+    img.src = s.getAttribute('data-src');
+    var c = s.getAttribute('data-caption') || '';
+    cap.textContent = c;
+    cap.hidden = !c;
   }
-  var ro = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('is-in'); ro.unobserve(e.target); }
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  reveals.forEach(function (el) { ro.observe(el); });
+
+  function open(i) {
+    lastFocus = document.activeElement;
+    collect();
+    show(i);
+    box.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    box.querySelector('.lb-close').focus();
+  }
+
+  function close() {
+    box.hidden = true;
+    img.src = '';
+    document.documentElement.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  collect();
+  shots.forEach(function (s, i) {
+    s.addEventListener('click', function () { open(i); });
+  });
+
+  box.querySelector('.lb-close').addEventListener('click', close);
+  box.querySelector('.lb-prev').addEventListener('click', function () { show(index - 1); });
+  box.querySelector('.lb-next').addEventListener('click', function () { show(index + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+
+  document.addEventListener('keydown', function (e) {
+    if (box.hidden) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(index - 1);
+    else if (e.key === 'ArrowRight') show(index + 1);
+  });
 })();

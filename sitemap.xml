@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://yijianlu2003.github.io/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/zh/"/></url>
+  <url><loc>https://yijianlu2003.github.io/research/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/zh/research/"/></url>
+  <url><loc>https://yijianlu2003.github.io/publications/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/zh/publications/"/></url>
+  <url><loc>https://yijianlu2003.github.io/education/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/zh/education/"/></url>
+  <url><loc>https://yijianlu2003.github.io/experience/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/zh/experience/"/></url>
+  <url><loc>https://yijianlu2003.github.io/awards/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/zh/awards/"/></url>
+  <url><loc>https://yijianlu2003.github.io/contact/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/zh/contact/"/></url>
   <url><loc>https://yijianlu2003.github.io/zh/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/"/></url>
+  <url><loc>https://yijianlu2003.github.io/zh/research/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/research/"/></url>
+  <url><loc>https://yijianlu2003.github.io/zh/publications/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/publications/"/></url>
+  <url><loc>https://yijianlu2003.github.io/zh/education/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/education/"/></url>
+  <url><loc>https://yijianlu2003.github.io/zh/experience/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/experience/"/></url>
+  <url><loc>https://yijianlu2003.github.io/zh/awards/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/awards/"/></url>
+  <url><loc>https://yijianlu2003.github.io/zh/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/contact/"/></url>
 </urlset>
