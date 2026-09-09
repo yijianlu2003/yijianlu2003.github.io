@@ -530,10 +530,13 @@ a.cite-title:hover { color: var(--oxblood); border-bottom-color: var(--oxblood);
 
 .awards {
   display: grid;
+  /* Wide enough for all three groups to share one row, so a tall middle
+     column does not leave a hole under the shorter ones. */
   grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
   gap: 1.85rem 2.5rem;
-  max-width: 46rem;
+  max-width: 50rem;
   margin-inline: auto;
+  align-items: start;
 }
 
 .awards-col h3 {

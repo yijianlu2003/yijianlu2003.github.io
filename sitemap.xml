@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.w3.org/1999/xhtml/sitemap" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://yijianlu2003.github.io/a/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/a/zh/"/></url>
-  <url><loc>https://yijianlu2003.github.io/a/zh/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/a/"/></url>
-  <url><loc>https://yijianlu2003.github.io/b/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/b/zh/"/></url>
-  <url><loc>https://yijianlu2003.github.io/b/zh/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/b/"/></url>
-  <url><loc>https://yijianlu2003.github.io/c/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/c/zh/"/></url>
-  <url><loc>https://yijianlu2003.github.io/c/zh/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/c/"/></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://yijianlu2003.github.io/</loc><xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yijianlu2003.github.io/zh/"/></url>
+  <url><loc>https://yijianlu2003.github.io/zh/</loc><xhtml:link rel="alternate" hreflang="en" href="https://yijianlu2003.github.io/"/></url>
 </urlset>
