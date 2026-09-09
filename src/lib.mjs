@@ -52,7 +52,8 @@ export function contactLinks(t, site, prefix) {
   ];
   if (site.scholar)
     out.push({ href: site.scholar, label: t.contact.scholarLabel, kind: 'scholar' });
-  if (site.orcid) out.push({ href: site.orcid, label: t.contact.orcidLabel, kind: 'orcid' });
+  // Academics quote the iD itself, so show it rather than a generic label.
+  if (site.orcid) out.push({ href: site.orcid, label: site.orcidId, kind: 'orcid' });
   if (site.linkedin)
     out.push({ href: site.linkedin, label: t.contact.linkedinLabel, kind: 'linkedin' });
   return out;

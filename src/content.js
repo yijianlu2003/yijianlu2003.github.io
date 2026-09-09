@@ -11,9 +11,10 @@ export const site = {
   portraitSquare: 'portrait-square.jpg',
   candid: 'photo-tencent.jpg',
   updated: '2026-09',
+  orcid: 'https://orcid.org/0009-0004-3344-8378',
+  orcidId: '0009-0004-3344-8378',
   // Fill these in when you have them; they are skipped while null.
   scholar: null,
-  orcid: null,
   linkedin: null,
 };
 
