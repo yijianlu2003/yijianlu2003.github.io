@@ -26,6 +26,18 @@ export const experience = {
         label: 'Industry',
         items: [
           {
+            org: 'Manulife (International) Limited',
+            role: 'Insurance & Financial Advisory Intern',
+            period: 'Sep — Dec 2025',
+            place: 'Hong Kong SAR',
+            photoDir: 'manulife',
+            bullets: [
+              'Studied Hong Kong insurance and financial planning while completing my first term at HKU: policy structures, premium and protection design, and the regulatory and ethics requirements for licensed intermediaries.',
+              'Prepared client-facing needs analyses across life, medical and savings products, and sat in on advisory meetings from first contact through to proposal.',
+              'Learned the practical side of the trade — that a good recommendation is mostly arithmetic and honest questions, and that the hardest constraint is the client’s trust, not the product range.',
+            ],
+          },
+          {
             org: 'Tencent Technology (Shenzhen) Co., Ltd.',
             unit: 'AMS — Tencent Ads',
             role: 'Industry Operations Intern',
@@ -125,6 +137,18 @@ export const experience = {
       {
         label: '行业实习',
         items: [
+          {
+            org: '宏利人寿保险（国际）有限公司',
+            role: '保险与财务规划 实习顾问',
+            period: '2025 年 9 月 — 12 月',
+            place: '中国香港',
+            photoDir: 'manulife',
+            bullets: [
+              '在港大就读第一学期的同时系统学习香港保险与财务规划：保单结构、保费与保障额设计，以及持牌中介人的监管与职业道德要求。',
+              '为客户准备涵盖寿险、医疗与储蓄型产品的需求分析，并全程旁听从初次接触到方案呈现的顾问会谈。',
+              '学到了这门行当的实务一面——一份好建议大半靠算术和诚实的提问；真正最紧的约束是客户的信任，而不是产品线的宽度。',
+            ],
+          },
           {
             org: '腾讯科技（深圳）有限公司',
             unit: 'AMS 腾讯广告',

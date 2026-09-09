@@ -2,12 +2,14 @@
 
 One folder per experience entry. Drop image files in, then run `npm run build`.
 
-| Folder     | Appears under                                        |
-|------------|------------------------------------------------------|
-| `tencent`  | Tencent Ads — Industry Operations Intern             |
-| `jd`       | JD Retail — Headquarters Intern, Merchandising       |
-| `sf`       | SF Express — Headquarters Management Trainee         |
-| `campus`   | Student Science & Technology Innovation Association  |
+| Folder      | Appears under                                        |
+|-------------|------------------------------------------------------|
+| `manulife`  | Manulife — Insurance & Financial Advisory Intern     |
+| `tencent`   | Tencent Ads — Industry Operations Intern             |
+| `jd`        | JD Retail — Headquarters Intern, Merchandising       |
+| `sf`        | SF Express — Headquarters Management Trainee         |
+| `campus`    | Student Science & Technology Innovation Association  |
+| `aberdeen`  | University of Aberdeen summer school (Education page)|
 
 Accepted formats: jpg, jpeg, png, webp, avif, gif.
 

@@ -1,6 +1,10 @@
 {
   "01-tencent-academy.jpg": {
-    "en": "Tencent Academy, Shenzhen",
-    "zh": "深圳腾讯学堂"
+    "en": "Tencent Academy, Shenzhen.",
+    "zh": "深圳腾讯学堂。"
+  },
+  "02-learning-wall.jpg": {
+    "en": "“Learning never ends” — the Academy wall, and the resident penguin.",
+    "zh": "学无止境 —— 腾讯学堂的墙，以及那只常驻的企鹅。"
   }
 }

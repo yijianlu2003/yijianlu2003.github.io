@@ -102,7 +102,7 @@ function sectionPublications(t, ctx) {
 </ol>`;
 }
 
-function sectionEducation(t) {
+function sectionEducation(t, ctx) {
   return `<ul class="entries">
   ${t.items
     .map(
@@ -119,6 +119,7 @@ function sectionEducation(t) {
         ? `<ul class="courses">${e.courses.map((c) => `<li>${esc(c)}</li>`).join('')}</ul>`
         : ''
     }
+    ${e.photoDir ? album(e, ctx) : ''}
   </li>`
     )
     .join('\n  ')}
@@ -146,7 +147,7 @@ function album(item, ctx) {
         const cap = s.caption ? s.caption[locale] || s.caption.en || '' : '';
         return `<li>
       <button type="button" class="shot" data-src="${esc(src)}" data-caption="${esc(cap)}">
-        <img src="${esc(src)}" alt="${esc(cap || item.org)}" loading="lazy" decoding="async">
+        <img src="${esc(src)}" alt="${esc(cap || item.org || item.school || '')}" loading="lazy" decoding="async">
       </button>
       ${cap ? `<span class="shot-cap">${esc(cap)}</span>` : ''}
     </li>`;

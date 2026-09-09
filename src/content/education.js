@@ -29,6 +29,16 @@ export const education = {
         ],
       },
       {
+        school: 'University of Aberdeen',
+        note: 'Summer school · funded by Nanjing Agricultural University',
+        degree: 'Summer School in Applied Technology and Data Science',
+        period: 'Jul — Sep 2023',
+        place: 'Aberdeen, Scotland',
+        detail:
+          'Named Outstanding Student. Discussed frontier applications of AI and big data in industry with Professor Graeme Nicol.',
+        photoDir: 'aberdeen',
+      },
+      {
         school: 'Nanjing Agricultural University',
         note: 'Project 211 · Double First-Class',
         degree: 'BEng in Logistics Engineering',
@@ -77,6 +87,16 @@ export const education = {
           '数据与系统工程前沿（B+）',
           '机器学习及其应用（B+）',
         ],
+      },
+      {
+        school: '英国阿伯丁大学',
+        note: '暑期访学 · 南京农业大学资助',
+        degree: '应用技术与数据科学暑期学校',
+        period: '2023 年 7 月 — 9 月',
+        place: '英国 · 阿伯丁',
+        detail:
+          '获评优秀营员。与 Graeme Nicol 教授探讨人工智能与大数据在工业技术中的前沿应用。',
+        photoDir: 'aberdeen',
       },
       {
         school: '南京农业大学',

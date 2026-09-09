@@ -546,10 +546,13 @@ a.cite-title:hover { color: var(--oxblood); border-bottom-color: var(--oxblood);
 }
 .shot:hover { border-color: var(--oxblood); transform: translateY(-2px); }
 
+/* Albums mix landscape photographs with portrait phone screenshots, so show
+   each thumbnail whole rather than cropping to a fixed frame. */
 .shot img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: var(--cream);
 }
 
 .shot-cap {
