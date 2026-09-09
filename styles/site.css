@@ -274,27 +274,10 @@ a:hover { color: var(--oxblood); }
 }
 .prose--dropcap p + p:not(.lead) { text-indent: 1.3em; }
 
-/* ---------- Personal statement ---------- */
-
-.credo {
-  max-width: var(--measure);
-  margin: 2.25rem auto 0;
-  padding: 1.5rem 0 0;
-  border-top: 1px solid var(--rule-2);
-}
-.credo p {
-  margin: 0 0 1em;
-  color: var(--ink-2);
-  text-wrap: pretty;
-}
-.credo p:last-child { margin-bottom: 0; }
-.credo strong { color: var(--ink); font-weight: 600; }
-.credo strong em {
-  display: inline-block;
-  margin-top: 0.35em;
-  color: var(--oxblood);
-  font-style: italic;
-}
+/* Inline emphasis inside prose. Kept deliberately quiet so an emphasised
+   run does not disturb the measure, leading or colour of the paragraph. */
+.prose strong { font-weight: 600; }
+.prose strong em { font-style: italic; }
 
 /* ---------- Fact lists ---------- */
 

@@ -8,6 +8,7 @@
 import { mkdir, writeFile, rm, readdir, readFile } from 'node:fs/promises';
 import { dirname, join, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 import { pages, site, identity, ui, LOCALES } from './content/index.js';
 import { renderPage } from './page.mjs';
@@ -156,8 +157,19 @@ ${urls}
 </urlset>`;
 }
 
+/**
+ * Short content hash appended to the stylesheet and script URLs. GitHub Pages
+ * serves them with a ten-minute cache, so without this a style change can go
+ * unseen; with it the filename changes and the browser must refetch.
+ */
+async function assetVersion() {
+  const css = await readFile(join(ROOT, 'styles', 'site.css'), 'utf8');
+  return createHash('sha256').update(css).update(SITE_JS).digest('hex').slice(0, 8);
+}
+
 async function main() {
   const albums = await discoverAlbums();
+  const version = await assetVersion();
   const pubs = (pages.find((p) => p.kind === 'publications') || {}).en?.items || [];
 
   // Clear previously generated directories so removed pages disappear.
@@ -203,6 +215,7 @@ async function main() {
         altRel,
         albums,
         pubs,
+        version,
       });
 
       written.push(await emit(here.out, html));

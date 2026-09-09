@@ -8,18 +8,15 @@ function sectionAbout(t, ctx) {
   const v = ctx.site.visitors || {};
   const showFlags = Boolean(v.flagSrc && v.flagHref);
 
+  // The credo paragraphs sit inside .prose rather than in a block of their
+  // own, so they inherit the same measure, indent, spacing and colour as the
+  // introduction above them. Only the inline emphasis sets them apart.
+  const paragraphs = [...t.body, ...(t.credo || [])];
+
   return `<div class="prose prose--dropcap">
   <p class="lead">${esc(t.lead)}</p>
-  ${t.body.map((p) => `<p>${inline(p)}</p>`).join('\n  ')}
+  ${paragraphs.map((p) => `<p>${inline(p)}</p>`).join('\n  ')}
 </div>
-
-${
-  t.credo && t.credo.length
-    ? `<div class="credo">
-  ${t.credo.map((p) => `<p>${inline(p)}</p>`).join('\n  ')}
-</div>`
-    : ''
-}
 
 ${
   t.highlights && t.highlights.length
@@ -263,7 +260,8 @@ const SECTIONS = {
 /* --------------------------------- shell -------------------------------- */
 
 export function renderPage(ctx) {
-  const { page, locale, depth, identity, site, ui, nav, altUrl, selfUrl, pubs } = ctx;
+  const { page, locale, depth, identity, site, ui, nav, altUrl, selfUrl, pubs, version } = ctx;
+  const v = version ? `?v=${version}` : '';
   const t = page[locale];
   const root = up(depth);
   const year = new Date().getFullYear();
@@ -300,7 +298,7 @@ export function renderPage(ctx) {
 <meta property="og:url" content="${esc(site.url)}${esc(selfUrl)}">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="${root}styles/site.css">
+<link rel="stylesheet" href="${root}styles/site.css${v}">
 ${jsonLd({ site, identity, pubs, url: `${site.url}${selfUrl}` })}
 </head>
 <body class="${isHome ? 'is-home' : 'is-page'}">
@@ -365,7 +363,7 @@ ${jsonLd({ site, identity, pubs, url: `${site.url}${selfUrl}` })}
   <button class="lb-next" type="button" aria-label="Next">&#8250;</button>
 </div>
 
-<script src="${root}assets/site.js" defer></script>
+<script src="${root}assets/site.js${v}" defer></script>
 </body>
 </html>`;
 }
