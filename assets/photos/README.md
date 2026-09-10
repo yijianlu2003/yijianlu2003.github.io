@@ -6,7 +6,7 @@ One folder per experience entry. Drop image files in, then run `npm run build`.
 |-------------|------------------------------------------------------|
 | `manulife`  | Manulife — Insurance & Financial Advisory Intern     |
 | `tencent`   | Tencent Ads — Industry Operations Intern             |
-| `jd`        | JD Retail — Headquarters Intern, Merchandising       |
+| `jd`        | JD Retail — Merchandising                            |
 | `sf`        | SF Express — Headquarters Management Trainee         |
 | `campus`    | Student Science & Technology Innovation Association  |
 | `aberdeen`  | Education page — album below Languages               |

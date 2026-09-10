@@ -354,6 +354,7 @@ a:hover { color: var(--oxblood); }
   font-weight: 400;
   font-variant: small-caps;
   letter-spacing: 0.045em;
+  text-align: center;
 }
 .theme-n {
   display: inline-block;
@@ -556,7 +557,11 @@ a.cite-title:hover { color: var(--oxblood); border-bottom-color: var(--oxblood);
   padding: 0.2rem 0.5rem;
 }
 
-.plain-list { max-width: 42rem; margin-inline: auto; }
+.plain-list {
+  width: max-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
 .plain-list li {
   padding-left: 1.05rem; position: relative;
   margin-bottom: 0.45rem; font-size: 0.95em; color: var(--ink-2);

@@ -53,7 +53,7 @@ export const experience = {
           {
             org: 'JD.com — JD Century Trading (Beijing) Co., Ltd.',
             unit: 'JD Retail',
-            role: 'Headquarters Intern, Merchandising',
+            role: 'Merchandising',
             period: 'Nov 2024 — Mar 2025',
             place: 'Beijing, China',
             photoDir: 'jd',
@@ -148,7 +148,7 @@ export const experience = {
           {
             org: '京东世纪贸易（北京）有限公司',
             unit: '京东零售',
-            role: '总部实习生 · 采销',
+            role: '采销',
             period: '2024 年 11 月 — 2025 年 3 月',
             place: '中国北京',
             photoDir: 'jd',
