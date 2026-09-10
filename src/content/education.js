@@ -20,6 +20,7 @@ export const education = {
         degree: 'MSc(Eng) in Industrial Engineering and Logistics Management',
         period: 'Sep 2025 — Nov 2026',
         place: 'Hong Kong SAR',
+        advisor: 'Fangni Zhang',
         courses: [
           'Frontiers in Robotics and Intelligent Systems',
           'Frontiers in Data and Systems Engineering',
@@ -33,7 +34,6 @@ export const education = {
         degree: 'Summer School in Applied Technology and Data Science',
         period: 'Jul — Sep 2023',
         place: 'Aberdeen, Scotland',
-        photoDir: 'aberdeen',
       },
       {
         school: 'Nanjing Agricultural University',
@@ -41,6 +41,7 @@ export const education = {
         degree: 'BEng in Logistics Engineering',
         period: 'Sep 2021 — Jun 2025',
         place: 'Nanjing, China',
+        advisor: 'Yining Yu',
         courses: [
           'Operations Research I',
           'Operations Research II',
@@ -59,6 +60,10 @@ export const education = {
         'English — IELTS 6.5; master’s degree taught and completed entirely in English',
       ],
     },
+
+    advisorLabel: 'Supervisor',
+    // All education photos sit in one album below Languages.
+    photoDirs: ['aberdeen'],
   },
 
   zh: {
@@ -75,6 +80,7 @@ export const education = {
         degree: '工业工程与物流管理 硕士 MSc(Eng)',
         period: '2025 年 9 月 — 2026 年 11 月',
         place: '中国香港',
+        advisor: 'Fangni Zhang',
         courses: [
           '机器人与智能系统前沿',
           '数据与系统工程前沿',
@@ -88,7 +94,6 @@ export const education = {
         degree: '应用技术与数据科学暑期学校',
         period: '2023 年 7 月 — 9 月',
         place: '英国 · 阿伯丁',
-        photoDir: 'aberdeen',
       },
       {
         school: '南京农业大学',
@@ -96,6 +101,7 @@ export const education = {
         degree: '物流工程 工学学士',
         period: '2021 年 9 月 — 2025 年 6 月',
         place: '中国南京',
+        advisor: 'Yining Yu',
         courses: [
           '运筹学 I',
           '运筹学 II',
@@ -111,5 +117,8 @@ export const education = {
       label: '语言',
       items: ['中文 — 母语', '英文 — 雅思 6.5；硕士阶段全英文授课并完成'],
     },
+
+    advisorLabel: '指导老师',
+    photoDirs: ['aberdeen'],
   },
 };

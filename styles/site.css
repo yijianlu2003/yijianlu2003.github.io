@@ -503,6 +503,7 @@ a.cite-title:hover { color: var(--oxblood); border-bottom-color: var(--oxblood);
   color: var(--ink-3);
 }
 
+.entry-advisor,
 .entry-detail { margin: 0 0 0.7rem; font-size: 0.95em; color: var(--ink-2); }
 
 .entry-bullets,

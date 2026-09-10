@@ -123,25 +123,31 @@ function sectionPublications(t, ctx) {
 }
 
 function sectionEducation(t, ctx) {
+  const photos = (t.photoDirs || [])
+    .map((dir) => album({ photoDir: dir }, ctx, { noHeading: true }))
+    .filter(Boolean)
+    .join('\n');
+
   return `<ul class="entries">
   ${t.items
-    .map(
-      (e) => `<li class="entry">
+    .map((e) => {
+      const courses =
+        e.courses && e.courses.length
+          ? `\n    <ul class="courses">${e.courses.map((c) => `<li>${esc(c)}</li>`).join('')}</ul>`
+          : '';
+      const advisor = e.advisor
+        ? `\n    <p class="entry-advisor">${esc(t.advisorLabel)} <span class="mid">·</span> ${esc(e.advisor)}</p>`
+        : '';
+      const note = e.note ? `\n    <p class="entry-note">${esc(e.note)}</p>` : '';
+      const detail = e.detail ? `\n    <p class="entry-detail">${esc(e.detail)}</p>` : '';
+      return `<li class="entry">
     <div class="entry-head">
       <h3>${esc(e.school)}</h3>
       <span class="entry-period">${esc(e.period)}</span>
     </div>
-    <p class="entry-sub"><em>${esc(e.degree)}</em> <span class="mid">·</span> ${esc(e.place)}</p>
-    <p class="entry-note">${esc(e.note)}</p>
-    ${e.detail ? `<p class="entry-detail">${esc(e.detail)}</p>` : ''}
-    ${
-      e.courses && e.courses.length
-        ? `<ul class="courses">${e.courses.map((c) => `<li>${esc(c)}</li>`).join('')}</ul>`
-        : ''
-    }
-    ${e.photoDir ? album(e, ctx) : ''}
-  </li>`
-    )
+    <p class="entry-sub"><em>${esc(e.degree)}</em> <span class="mid">·</span> ${esc(e.place)}</p>${note}${advisor}${detail}${courses}
+  </li>`;
+    })
     .join('\n  ')}
 </ul>
 
@@ -150,6 +156,14 @@ ${
     ? `<div class="rule-soft"></div>
 <h3 class="sub">${esc(t.languages.label)}</h3>
 <ul class="plain-list">${t.languages.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`
+    : ''
+}
+
+${
+  photos
+    ? `<div class="rule-soft"></div>
+<h3 class="sub">${esc(ctx.ui.galleryHeading)}</h3>
+<div class="album-wide">${photos}</div>`
     : ''
 }`;
 }

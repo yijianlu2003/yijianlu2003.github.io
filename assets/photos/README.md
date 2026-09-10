@@ -9,7 +9,7 @@ One folder per experience entry. Drop image files in, then run `npm run build`.
 | `jd`        | JD Retail — Headquarters Intern, Merchandising       |
 | `sf`        | SF Express — Headquarters Management Trainee         |
 | `campus`    | Student Science & Technology Innovation Association  |
-| `aberdeen`  | University of Aberdeen summer school (Education page)|
+| `aberdeen`  | Education page — album below Languages               |
 
 Accepted formats: jpg, jpeg, png, webp, avif, gif.
 
