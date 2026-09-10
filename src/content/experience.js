@@ -42,7 +42,7 @@ export const experience = {
             org: 'Tencent Technology (Shenzhen) Co., Ltd.',
             unit: 'AMS — Tencent Ads',
             role: 'Industry Operations Intern',
-            period: 'Apr — Jul 2025',
+            period: 'May — Sep 2025',
             place: 'Shenzhen, China',
             photoDir: 'tencent',
             bullets: [
@@ -54,7 +54,7 @@ export const experience = {
             org: 'JD.com — JD Century Trading (Beijing) Co., Ltd.',
             unit: 'JD Retail',
             role: 'Headquarters Intern, Merchandising',
-            period: 'Nov 2024 — Apr 2025',
+            period: 'Nov 2024 — Mar 2025',
             place: 'Beijing, China',
             photoDir: 'jd',
             bullets: [
@@ -65,7 +65,7 @@ export const experience = {
           {
             org: 'SF Express (Shenzhen) Co., Ltd.',
             role: 'Headquarters Management Trainee',
-            period: 'Jun — Oct 2024',
+            period: 'Jun — Sep 2024',
             place: 'Shenzhen, China',
             photoDir: 'sf',
             bullets: [
@@ -137,7 +137,7 @@ export const experience = {
             org: '腾讯科技（深圳）有限公司',
             unit: 'AMS 腾讯广告',
             role: '行业运营实习生',
-            period: '2025 年 4 月 — 7 月',
+            period: '2025 年 5 月 — 9 月',
             place: '中国深圳',
             photoDir: 'tencent',
             bullets: [
@@ -149,7 +149,7 @@ export const experience = {
             org: '京东世纪贸易（北京）有限公司',
             unit: '京东零售',
             role: '总部实习生 · 采销',
-            period: '2024 年 11 月 — 2025 年 4 月',
+            period: '2024 年 11 月 — 2025 年 3 月',
             place: '中国北京',
             photoDir: 'jd',
             bullets: [
@@ -160,7 +160,7 @@ export const experience = {
           {
             org: '顺丰速运（深圳）有限公司',
             role: '总部管理培训生',
-            period: '2024 年 6 月 — 10 月',
+            period: '2024 年 6 月 — 9 月',
             place: '中国深圳',
             photoDir: 'sf',
             bullets: [
