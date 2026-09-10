@@ -100,12 +100,15 @@ a:hover { color: var(--oxblood); }
 
 .plate {
   display: grid;
-  grid-template-columns: clamp(6.5rem, 13vw, 10rem) minmax(0, 1fr);
+  grid-template-columns: clamp(6.5rem, 13vw, 10rem) auto;
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: center;
+  width: max-content;
+  max-width: 100%;
+  margin-inline: auto;
 }
 
-.is-page .plate { grid-template-columns: clamp(4.5rem, 8vw, 6rem) minmax(0, 1fr); }
+.is-page .plate { grid-template-columns: clamp(4.5rem, 8vw, 6rem) auto; }
 
 .frame {
   display: block;
@@ -148,7 +151,14 @@ a:hover { color: var(--oxblood); }
 .is-page .affil { font-size: 0.9em; }
 
 @media (max-width: 40rem) {
-  .plate { grid-template-columns: 1fr; justify-items: start; gap: 1.25rem; }
+  .plate {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    width: 100%;
+  }
+  .plate-text .flourish { justify-content: center; }
   .frame { width: 6.5rem; }
   .is-page .frame { width: 4.5rem; }
   .name-alt { letter-spacing: 0.28em; }
@@ -283,10 +293,12 @@ a:hover { color: var(--oxblood); }
 
 .facts {
   display: grid;
-  grid-template-columns: 9.5rem minmax(0, 1fr);
+  grid-template-columns: max-content minmax(0, max-content);
+  justify-content: center;
   gap: 0.55rem 1.35rem;
+  width: max-content;
+  max-width: 100%;
   margin: 2.75rem auto 0;
-  max-width: 42rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--rule-2);
 }
@@ -302,13 +314,19 @@ a:hover { color: var(--oxblood); }
   padding-top: 0.2rem;
   text-align: right;
 }
-.facts dd { margin: 0; color: var(--ink-2); font-size: 0.96em; }
+.facts dd { margin: 0; min-width: 0; color: var(--ink-2); font-size: 0.96em; }
 .facts--contact dd { font-size: 1em; }
 .facts--contact dd a { text-decoration-color: var(--rule); }
 
 @media (max-width: 34rem) {
-  .facts { grid-template-columns: 1fr; gap: 0.1rem 0; }
-  .facts dt { text-align: left; }
+  .facts {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 0.1rem 0;
+    justify-items: center;
+    text-align: center;
+  }
+  .facts dt { text-align: center; }
   .facts dd { margin-bottom: 0.7rem; }
 }
 
