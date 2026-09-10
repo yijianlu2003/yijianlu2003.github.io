@@ -31,7 +31,7 @@ export const education = {
       {
         school: 'University of Aberdeen',
         note: 'Summer school · funded by Nanjing Agricultural University',
-        degree: 'Summer School in Applied Technology and Data Science',
+        degree: 'Summer School',
         period: 'Jul — Sep 2023',
         place: 'Aberdeen, Scotland',
       },
